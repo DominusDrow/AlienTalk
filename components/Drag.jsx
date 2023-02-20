@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { View, TouchableOpacity, StyleSheet, PanResponder, Animated, Text, Image } from 'react-native';
+import { TouchableOpacity, StyleSheet, PanResponder, Animated, Text, Image } from 'react-native';
 import alien from '../assets/alien/alien.png';
 
 export const DraggableButton = () => {
@@ -39,8 +39,8 @@ export const DraggableButton = () => {
 const styles = StyleSheet.create({
   button: {
     position: 'absolute',
-    top: 100,
-    left: 100,
+    top: 600,
+    left: 300,
   },
   touchable: {
     padding: 10,
