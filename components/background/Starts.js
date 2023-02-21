@@ -5,11 +5,11 @@ export const Stars = () => {
   
   return (
     <View style={styles.startsContainer}>
-      {[...Array(100)].map((_, i) => (
+      {[...Array(60)].map((_, i) => (
         <View key={i}
           style={[
             styles.star,
-            { left: Math.random() * 400, top: Math.random() * 800 }
+            { left: Math.random() * 400, top: Math.random() * 400 }
           ]}>
           <Image source={start} style={styles.image} />
         </View>
