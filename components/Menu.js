@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text } from 'react-native';
-import { GiHamburgerMenu } from 'react-icons/gi';
 
 export const Menu = () => {
   const [showOptions, setShowOptions] = useState(false);
@@ -24,7 +23,6 @@ export const Menu = () => {
   return (
     <View style={{ flex: 1 }}>
       <TouchableOpacity style={styles.button} onPress={toggleOptions}>
-        <GiHamburgerMenu size={30} />
       </TouchableOpacity>
       {showOptions && (
         <View style={styles.optionsContainer}>
