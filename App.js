@@ -4,18 +4,23 @@ import nave from './assets/nave/nave.jpg';
 import { Stars } from './components/background/Starts';
 import { Menu } from './components/Menu';
 
+import {store} from './redux/store';
+import {Provider} from 'react-redux';
+
+
+
+
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ImageBackground source={nave} style={styles.image}>
-        <Menu />
-        <View style={styles.startsContainer}>
-          <Stars />
-        </View>
-        <DraggableButton />
-      </ImageBackground>
+    <Provider store={store}>
+      <View style={styles.container}>
+        <ImageBackground source={nave} style={styles.image}>
+          <Menu />
+          <DraggableButton />
+        </ImageBackground>
 
-    </View>
+      </View>
+    </Provider>
   );
 }
 

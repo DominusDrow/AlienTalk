@@ -3,7 +3,7 @@ import { TouchableOpacity, StyleSheet, PanResponder, Animated, Text, Image } fro
 import alien from '../assets/alien/alien.png';
 
 export const DraggableButton = () => {
-  const [lastPosition, setLastPosition] = useState({ x: 0, y: 0 });
+  const [lastPosition, setLastPosition] = useState({ x: 150, y: 200 });
   const position = useRef(new Animated.ValueXY(lastPosition)).current;
 
   const panResponder = PanResponder.create({
