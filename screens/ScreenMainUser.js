@@ -1,5 +1,5 @@
 import { StyleSheet, View, ImageBackground } from 'react-native';
-import {DraggableButton}  from './components/Drag';
+import {DraggableButton}  from '../components/Drag';
 import nave from '../assets/nave/nave.jpg';
 import { Stars } from '../components/background/Starts';
 import { Menu } from '../components/Menu';
