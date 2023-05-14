@@ -1,10 +1,16 @@
-import { StyleSheet, View, ImageBackground } from 'react-native';
-import {DraggableButton}  from '../components/Drag';
+import { StyleSheet, View, ImageBackground, Button, Text } from 'react-native';
+import { AlienCmp }  from '../components/AlienCmp';
 import nave from '../assets/nave/nave.jpg';
 import { Stars } from '../components/background/Starts';
 import { Menu } from '../components/Menu';
 
+import { useDispatch } from 'react-redux';
+import { logout } from '../redux/authSlice';
+
 export default function ScreenMainUser({ navigation }) {
+  const dispatch = useDispatch()
+
+
   return (
     <View style={styles.container}>
       <ImageBackground source={nave} style={styles.image}>
@@ -12,7 +18,8 @@ export default function ScreenMainUser({ navigation }) {
         <View style={styles.startsContainer}>
           <Stars />
         </View>
-        <DraggableButton />
+        <AlienCmp />
+
       </ImageBackground>
 
     </View>

@@ -1,15 +1,20 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { useSelector } from 'react-redux';
 import { StackLogin, StackMain} from './AppNavigator';
 
-const LoginValidation = (props) => {
-    //const isAuth = useSelector(state=>state.auth.user);
+
+import { useSelector, useDispatch } from 'react-redux';
+import { loginSimple, logout } from '../redux/authSlice';
+
+const InitNavigation = (props) => {
+    const user = useSelector((state) => state.auth.user);
+    const dispatch = useDispatch();
+
     return (
         <NavigationContainer>
-            <StackMain/>
+            {user === 'guest' ? <StackLogin /> : <StackMain />}
         </NavigationContainer>
     );
 }
 
-export default LoginValidation;
+export default InitNavigation;

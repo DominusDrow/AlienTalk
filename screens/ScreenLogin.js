@@ -2,31 +2,12 @@
 import { View, StyleSheet, Text, Image, Dimensions} from "react-native";
 import { Button } from '@rneui/themed';
 
-
 import { useDispatch } from "react-redux";
-//import * as authActions from "../validators/actions/authActions";
-import { useSelector } from 'react-redux';
+import { loginSimple } from '../redux/authSlice';
 
 const ScreenLogin = ({ navigation }) => {
-  
 
   const dispatch = useDispatch();
-
-
-  function goToNumber() {
-    navigation.navigate("ScreenTelefonoValido");
-  }
-
-
-  const onClick = () => {
-    try {
-      dispatch(authActions.tryTrue());
-    } catch (e) {
-      Alert.alert("Error", e.toString(), [{ text: "Ok" }]);
-    }
-  };
-
-
 
       //<Image style={styles.img} source={require("../assets/img/hungry.jpg")} />
   return (
@@ -46,7 +27,7 @@ const ScreenLogin = ({ navigation }) => {
           width: 200,
           marginVertical: 50,
         }}
-        onPress={() => onClick()}
+        onPress={() => dispatch(loginSimple())}
       />
 
     </View>

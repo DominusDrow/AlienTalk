@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { TouchableOpacity, StyleSheet, PanResponder, Animated, Text, Image } from 'react-native';
 import alien from '../assets/alien/alien.png';
 
-export const DraggableButton = () => {
+export const AlienCmp = () => {
   const [lastPosition, setLastPosition] = useState({ x: 150, y: 200 });
   const position = useRef(new Animated.ValueXY(lastPosition)).current;
 
