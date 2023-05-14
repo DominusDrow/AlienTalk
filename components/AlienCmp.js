@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 600,
     left: 300,
+    zIndex: 1,
   },
   touchable: {
     padding: 10,

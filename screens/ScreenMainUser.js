@@ -1,55 +1,81 @@
-import { StyleSheet, View, ImageBackground, Button, Text } from 'react-native';
 import { AlienCmp }  from '../components/AlienCmp';
-import nave from '../assets/nave/nave.jpg';
-import { Stars } from '../components/background/Starts';
-import { Menu } from '../components/Menu';
 
-import { useDispatch } from 'react-redux';
-import { logout } from '../redux/authSlice';
+import React from 'react';
+import { View, StyleSheet } from 'react-native';
+import { Text, Icon } from '@rneui/themed';
 
-export default function ScreenMainUser({ navigation }) {
-  const dispatch = useDispatch()
-
-
+const ScreenMainUser = () => {
   return (
     <View style={styles.container}>
-      <ImageBackground source={nave} style={styles.image}>
-        <Menu />
-        <View style={styles.startsContainer}>
-          <Stars />
+      <AlienCmp />
+      <View style={styles.topBar}>
+        <View>
+          <Text style={{ color: 'white' }}>Energy: 100%</Text>
+          <Text style={{ color: 'white' }}>Health: 100%</Text>
         </View>
-        <AlienCmp />
-
-      </ImageBackground>
-
+        <Text style={{ color: 'white' }}>Extraterrestrial</Text>
+        <View>
+          <Icon name="notifications" type="ionicons" color="white" />
+          <Text style={{ color: 'white' }}>10</Text>
+        </View>
+      </View>
+      <View style={styles.middleContent}>
+        <View style={styles.starWindow}>
+          <Text style={{ color: 'white' }}>Star Window</Text>
+        </View>
+      </View>
+      <View style={styles.bottomBar}>
+        <View style={styles.screen} />
+        <View style={styles.bed} />
+      </View>
     </View>
   );
-}
+};
+
+export default ScreenMainUser;
 
 const styles = StyleSheet.create({
-  //style for the container view that should be a stage in in space
   container: {
     flex: 1,
     backgroundColor: 'black',
+  },
+  topBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
+  middleContent: {
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
   },
-  startsContainer: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '50%',
-    height: '50%',
+  starWindow: {
+    width: 200,
+    height: 200,
+    borderWidth: 2,
+    borderColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  text: {
-    color: 'white',
-    fontSize: 30,
-    fontWeight: 'bold',
+  bottomBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
-  image: {
-    flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-    width: '100%',
-    height: '100%',
+  screen: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'white',
+    borderRadius: 5,
+  },
+  bed: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'grey',
+    borderRadius: 5,
   },
 });
+
+
