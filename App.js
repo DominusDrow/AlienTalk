@@ -1,8 +1,6 @@
 
-import InitNavigation from './navigation/InitNavigation';
-
 import { Provider } from 'react-redux';
-
+import InitNavigation from './navigation/InitNavigation';
 
 import { configureStore } from '@reduxjs/toolkit';
 import counterReducer from './redux/counterSlice';
@@ -14,8 +12,6 @@ const store = configureStore({
     auth: authReducer,
   },
 })
-
-
 
 export default function App() {
   return (

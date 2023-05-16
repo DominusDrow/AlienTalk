@@ -65,10 +65,25 @@ export const StackNavigator = () => {
           headerShown: false
         }}
       />
+      <Tab.Screen
+        name="Store"
+        component={NoScreenForNow}
+        options={{
+          tabBarIcon: ({focused}) => <Icon name="store" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          headerShown: false
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={NoScreenForNow}
+        options={{
+          tabBarIcon: ({focused}) => <Icon name="person" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          headerShown: false
+        }}
+      />
     </Tab.Navigator>
   );
 }
-
 
 export const StackLogin = () => {
   return (

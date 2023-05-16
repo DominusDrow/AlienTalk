@@ -1,34 +1,44 @@
 import { AlienCmp }  from '../components/AlienCmp';
 
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Dimensions } from 'react-native';
 import { Text, Icon } from '@rneui/themed';
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
 const ScreenMainUser = () => {
   return (
-    <View style={styles.container}>
-      <AlienCmp />
-      <View style={styles.topBar}>
-        <View>
-          <Text style={{ color: 'white' }}>Energy: 100%</Text>
-          <Text style={{ color: 'white' }}>Health: 100%</Text>
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.topHalf}>
+          <View style={styles.topBar}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Icon name="battery" type="ionicons" color="white" style={{ marginRight: 5 }} />
+              <Text style={{ color: 'white', marginRight: 5 }}>Energy:</Text>
+              <Text style={{ color: 'white' }}>100%</Text>
+            </View>
+            <Text style={{ color: 'white' }}>Extraterrestrial</Text>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <Icon name="health" type="ionicons" color="white" style={{ marginRight: 5 }} />
+              <Text style={{ color: 'white', marginRight: 5 }}>Health:</Text>
+              <Text style={{ color: 'white' }}>100%</Text>
+            </View>
+          </View>
+          <View style={styles.middleContent}>
+            <View style={styles.starWindow}>
+              <Text style={{ color: 'white' }}>Star Window</Text>
+            </View>
+          </View>
         </View>
-        <Text style={{ color: 'white' }}>Extraterrestrial</Text>
-        <View>
-          <Icon name="notifications" type="ionicons" color="white" />
-          <Text style={{ color: 'white' }}>10</Text>
+        <View style={styles.bottomHalf}>
+          <View style={styles.bottomBar}>
+            <View style={styles.screen} />
+            <View style={styles.bed} />
+          </View>
         </View>
-      </View>
-      <View style={styles.middleContent}>
-        <View style={styles.starWindow}>
-          <Text style={{ color: 'white' }}>Star Window</Text>
-        </View>
-      </View>
-      <View style={styles.bottomBar}>
-        <View style={styles.screen} />
-        <View style={styles.bed} />
-      </View>
-    </View>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 };
 
@@ -37,7 +47,14 @@ export default ScreenMainUser;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  topHalf: {
+    flex: 1,
     backgroundColor: 'black',
+  },
+  bottomHalf: {
+    flex: 1,
+    backgroundColor: 'lightgrey',
   },
   topBar: {
     flexDirection: 'row',
@@ -47,16 +64,19 @@ const styles = StyleSheet.create({
   },
   middleContent: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
   starWindow: {
-    width: 200,
-    height: 200,
+    width: screenWidth * 0.9,
+    height: screenHeight * 0.4,
+    borderTopLeftRadius: 60,
+    borderTopRightRadius: 60,
     borderWidth: 2,
     borderColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: 20,
   },
   bottomBar: {
     flexDirection: 'row',
