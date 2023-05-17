@@ -2,16 +2,18 @@ import { AlienCmp }  from '../components/AlienCmp';
 
 import React from 'react';
 import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
-import { Text, Icon } from '@rneui/themed';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 
 import { Stars } from '../components/background/Starts';
+import TobBar from '../components/TopBar';
+import { CustomModal } from '../components/CustomModal';
 
 //Svg components
 import Computer from '../components/spaceship/Computer';
 import Bed from '../components/spaceship/Bed';
 import Desk from '../components/spaceship/Desk';
+
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
@@ -21,41 +23,19 @@ const ScreenMainUser = () => {
       <SafeAreaView style={styles.container}>
         <AlienCmp />
         <View style={styles.topHalf}>
-          <View style={styles.topBar}>
-            <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="battery-full" size={20} color="white" />
-                <Text style={{ color: 'white' }}>100%</Text>
-              </View>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="moon" type="feather" size={20} color="white" />
-                <Text style={{ color: 'white' }}>100%</Text>
-              </View>
-              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Icon name="heart" type="antdesign" size={20} color="white" />
-                <Text style={{ color: 'white' }}>100%</Text>
-              </View>
 
-            </View>
-            <Text style={{ color: 'white' }}>Extraterrestrial</Text>
-            <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-              <TouchableOpacity>
-                <Icon name="settings" size={35} color="white" />
-              </TouchableOpacity>
-            </View>
-          </View>
+          <TobBar />
+          
           <View style={styles.middleContent}>
             <View style={styles.starWindow}>
-              <Stars />
+              <Stars/>
             </View>
           </View>
         </View>
         <View style={styles.bottomHalf}>
 
           <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-            <TouchableOpacity>
-              <Computer />
-            </TouchableOpacity>
+              <CustomModal />
 
             <View style={styles.bottomBar}>
               <Bed />
@@ -78,17 +58,11 @@ const styles = StyleSheet.create({
   },
   topHalf: {
     flex: 1,
-    backgroundColor: 'black',
+    backgroundColor: 'gray',
   },
   bottomHalf: {
     flex: 1,
     backgroundColor: 'lightblue',
-  },
-  topBar: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 20,
-    paddingVertical: 10,
   },
   middleContent: {
     flex: 1,
@@ -108,6 +82,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     zIndex: 2,
     marginTop: -20,
+    backgroundColor: 'black',
   },
   bottomBar: {
     flexDirection: 'row',
