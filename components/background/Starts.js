@@ -22,7 +22,7 @@ export const Stars = () => {
 
         return updatedStars;
       });
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(intervalId);
   }, []);
