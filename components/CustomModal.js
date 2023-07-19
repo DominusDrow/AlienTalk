@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Modal, Text, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react'
+import { Modal, Text, TouchableOpacity, View } from 'react-native'
 
-import Computer from './spaceship/Computer';
+import Computer from './spaceship/Computer'
 
 export const CustomModal = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false)
 
   return (
     <>
@@ -21,6 +21,5 @@ export const CustomModal = () => {
         </View>
       </Modal>
     </>
-  );
-};
-
+  )
+}

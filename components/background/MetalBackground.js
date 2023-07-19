@@ -1,6 +1,6 @@
-import React from 'react';
-import { View } from 'react-native';
-import Svg, { LinearGradient, Rect, Stop } from 'react-native-svg';
+import React from 'react'
+import { View } from 'react-native'
+import Svg, { LinearGradient, Rect, Stop } from 'react-native-svg'
 
 const MetalBackground = () => {
   return (
@@ -15,16 +15,15 @@ const MetalBackground = () => {
         <Rect x="0" y="0" width="300" height="300" fill="url(#metal-gradient)" />
       </Svg>
     </View>
-  );
-};
+  )
+}
 
-export default MetalBackground;
+export default MetalBackground
 
 const styles = {
   container: {
     position: 'absolute',
     top: 0,
-    left: 0,
-  },
-};
-
+    left: 0
+  }
+}

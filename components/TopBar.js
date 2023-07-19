@@ -1,6 +1,5 @@
-
-import { Text, Icon } from '@rneui/themed';
-import { View, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, Icon } from '@rneui/themed'
+import { View, StyleSheet, TouchableOpacity } from 'react-native'
 
 const TobBar = () => {
   return (
@@ -28,16 +27,16 @@ const TobBar = () => {
       </View>
     </View>
 
-  );
+  )
 }
 
-export default TobBar;
+export default TobBar
 
 const styles = StyleSheet.create({
   topBar: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: 20,
-    paddingVertical: 10,
-  },
-});
+    paddingVertical: 10
+  }
+})

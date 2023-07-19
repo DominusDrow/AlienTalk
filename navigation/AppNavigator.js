@@ -1,23 +1,22 @@
-import React from "react";
-import { View, Text } from "react-native";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import React from 'react'
+import { View, Text } from 'react-native'
+import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
-import ScreenLogin from "../screens/ScreenLogin";
-import ScreenMainUser from "../screens/ScreenMainUser";
+import ScreenLogin from '../screens/ScreenLogin'
+import ScreenMainUser from '../screens/ScreenMainUser'
 
-const Tab = createBottomTabNavigator();
-const Stack = createStackNavigator();
+import { Icon } from '@rneui/themed'
 
-
-import { Icon } from '@rneui/themed';
+const Tab = createBottomTabNavigator()
+const Stack = createStackNavigator()
 
 function NoScreenForNow() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>WORK IN PROGRESS</Text>
     </View>
-  );
+  )
 }
 
 export const StackNavigator = () => {
@@ -25,7 +24,7 @@ export const StackNavigator = () => {
     <Tab.Navigator
       screenOptions={{
         tabBarShowLabel: true,
-        tabBarStyle:{
+        tabBarStyle: {
           position: 'absolute',
           bottom: 10,
           left: 10,
@@ -34,11 +33,11 @@ export const StackNavigator = () => {
           backgroundColor: 'rgba(33, 33, 33, 0.5)',
           borderRadius: 20,
           height: 50,
-          display: "flex",
-          shadowColor: "#000",
+          display: 'flex',
+          shadowColor: '#000',
           shadowOffset: {
             width: 0,
-            height: 1,
+            height: 1
           },
           shadowOpacity: 0.18,
           shadowRadius: 1.00,
@@ -50,18 +49,18 @@ export const StackNavigator = () => {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name='Home'
         component={ScreenMainUser}
         options={{
-          tabBarIcon: ({focused}) => <Icon name="home" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          tabBarIcon: ({ focused }) => <Icon name='home' color={focused ? '#ffffff' : '#ffffff'} size={25} />,
           headerShown: false
         }}
       />
       <Tab.Screen
-        name="Space"
+        name='Space'
         component={NoScreenForNow}
         options={{
-          tabBarIcon: ({focused}) => <Icon name="stop" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          tabBarIcon: ({ focused }) => <Icon name='stop' color={focused ? '#ffffff' : '#ffffff'} size={25} />,
           headerShown: false
         }}
       />
@@ -69,7 +68,7 @@ export const StackNavigator = () => {
         name="Store"
         component={NoScreenForNow}
         options={{
-          tabBarIcon: ({focused}) => <Icon name="store" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          tabBarIcon: ({ focused }) => <Icon name="store" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
           headerShown: false
         }}
       />
@@ -77,26 +76,25 @@ export const StackNavigator = () => {
         name="Profile"
         component={NoScreenForNow}
         options={{
-          tabBarIcon: ({focused}) => <Icon name="person" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          tabBarIcon: ({ focused }) => <Icon name="person" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
           headerShown: false
         }}
       />
     </Tab.Navigator>
-  );
+  )
 }
 
 export const StackLogin = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name={"ScreenLogin"}
+        name={'ScreenLogin'}
         component={ScreenLogin}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
-  );
-};
-
+  )
+}
 
 export const StackMain = () => {
   return (
@@ -107,6 +105,5 @@ export const StackMain = () => {
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
-  );
-};
-
+  )
+}

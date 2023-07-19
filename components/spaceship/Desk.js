@@ -1,6 +1,6 @@
-import React from 'react';
-import { View } from 'react-native';
-import Svg, { Rect, Line, Polygon } from 'react-native-svg';
+import React from 'react'
+import { View } from 'react-native'
+import Svg, { Rect, Line, Polygon } from 'react-native-svg'
 
 const Desk = () => {
   return (
@@ -8,7 +8,7 @@ const Desk = () => {
       <Svg width="170" height="180">
         {/* Desktop */}
         <Rect x="30" y="10" width="100" height="100" rx="10" fill="#333" />
-        
+
         {/* Monitor */}
         <Rect x="40" y="20" width="80" height="80" rx="5" fill="#f2f2f2" />
 
@@ -18,8 +18,7 @@ const Desk = () => {
 
       </Svg>
     </View>
-  );
-};
+  )
+}
 
-export default Desk;
-
+export default Desk

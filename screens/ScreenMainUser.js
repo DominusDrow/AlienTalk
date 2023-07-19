@@ -1,21 +1,19 @@
-import { AlienCmp }  from '../components/AlienCmp';
+import { AlienCmp } from '../components/AlienCmp'
 
-import React from 'react';
-import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
-import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import React from 'react'
+import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
+import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 
+import { Stars } from '../components/background/Starts'
+import TobBar from '../components/TopBar'
+import { CustomModal } from '../components/CustomModal'
 
-import { Stars } from '../components/background/Starts';
-import TobBar from '../components/TopBar';
-import { CustomModal } from '../components/CustomModal';
+// Svg components
+import Computer from '../components/spaceship/Computer'
+import Bed from '../components/spaceship/Bed'
+import Desk from '../components/spaceship/Desk'
 
-//Svg components
-import Computer from '../components/spaceship/Computer';
-import Bed from '../components/spaceship/Bed';
-import Desk from '../components/spaceship/Desk';
-
-
-const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window')
 
 const ScreenMainUser = () => {
   return (
@@ -25,7 +23,7 @@ const ScreenMainUser = () => {
         <View style={styles.topHalf}>
 
           <TobBar />
-          
+
           <View style={styles.middleContent}>
             <View style={styles.starWindow}>
               <Stars/>
@@ -43,31 +41,30 @@ const ScreenMainUser = () => {
             </View>
           </View>
 
-
         </View>
       </SafeAreaView>
     </SafeAreaProvider>
-  );
-};
+  )
+}
 
-export default ScreenMainUser;
+export default ScreenMainUser
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1
   },
   topHalf: {
     flex: 1,
-    backgroundColor: 'gray',
+    backgroundColor: 'gray'
   },
   bottomHalf: {
     flex: 1,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'lightblue'
   },
   middleContent: {
     flex: 1,
     justifyContent: 'flex-start',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   starWindow: {
     width: screenWidth * 0.88,
@@ -82,13 +79,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     zIndex: 2,
     marginTop: -20,
-    backgroundColor: 'black',
+    backgroundColor: 'black'
   },
   bottomBar: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-  },
- 
-});
+    justifyContent: 'space-between'
+  }
 
-
+})

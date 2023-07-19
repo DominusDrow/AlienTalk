@@ -1,6 +1,6 @@
-import React from 'react';
-import { View } from 'react-native';
-import Svg, { Rect, Path, Circle } from 'react-native-svg';
+import React from 'react'
+import { View } from 'react-native'
+import Svg, { Rect, Path, Circle } from 'react-native-svg'
 
 const Bed = () => {
   return (
@@ -32,8 +32,7 @@ const Bed = () => {
         <Circle cx="50" cy="85" r="5" fill="#f2f2f2" />
       </Svg>
     </View>
-  );
-};
+  )
+}
 
-export default Bed;
-
+export default Bed

@@ -25,7 +25,11 @@
     "react-redux": "^8.0.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3"
+    "@babel/core": "^7.19.3",
+    "standart": "^6.1.0"
   },
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "extends": "./node_modules/standart/eslintrc.json"
+  }
 }

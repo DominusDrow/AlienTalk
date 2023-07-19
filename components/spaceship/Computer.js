@@ -1,6 +1,6 @@
-import React from 'react';
-import { View } from 'react-native';
-import Svg, { Rect, Text } from 'react-native-svg';
+import React from 'react'
+import { View } from 'react-native'
+import Svg, { Rect, Text } from 'react-native-svg'
 
 const Computer = () => {
   return (
@@ -25,17 +25,16 @@ const Computer = () => {
         <Rect x="40" y="100" width="120" height="30" rx="10" fill="#f2f2f2" />
       </Svg>
     </View>
-  );
-};
+  )
+}
 
-export default Computer;
+export default Computer
 
 const styles = {
   container: {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: -35,
-  },
-};
-
+    marginTop: -35
+  }
+}
