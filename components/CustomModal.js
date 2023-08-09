@@ -7,12 +7,12 @@ export const CustomModal = () => {
   const [modalVisible, setModalVisible] = useState(false)
 
   return (
-    <>
+    <View>
       <TouchableOpacity onPress={() => setModalVisible(true)}>
         <Computer />
       </TouchableOpacity>
 
-      <Modal visible={modalVisible} animationType="slide">
+      <Modal visible={modalVisible} animationType='slide'>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text>Contenido del modal</Text>
           <TouchableOpacity onPress={() => setModalVisible(false)}>
@@ -20,6 +20,6 @@ export const CustomModal = () => {
           </TouchableOpacity>
         </View>
       </Modal>
-    </>
+    </View>
   )
 }

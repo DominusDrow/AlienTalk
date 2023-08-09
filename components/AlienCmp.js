@@ -25,14 +25,14 @@ export const AlienCmp = () => {
   })
 
   return (
-      <Animated.View
-        style={[styles.button, position.getLayout()]}
-        {...panResponder.panHandlers}
+    <Animated.View
+      style={[styles.button, position.getLayout()]}
+      {...panResponder.panHandlers}
       >
-        <TouchableOpacity style={styles.touchable}>
-          <Image source={alien} style={styles.image} />
-        </TouchableOpacity>
-      </Animated.View>
+      <TouchableOpacity style={styles.touchable}>
+        <Image source={alien} style={styles.image} />
+      </TouchableOpacity>
+    </Animated.View>
   )
 }
 

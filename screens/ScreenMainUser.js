@@ -1,7 +1,7 @@
 import { AlienCmp } from '../components/AlienCmp'
 
 import React from 'react'
-import { View, StyleSheet, Dimensions, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Dimensions } from 'react-native'
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 
 import { Stars } from '../components/background/Starts'
@@ -9,7 +9,7 @@ import TobBar from '../components/TopBar'
 import { CustomModal } from '../components/CustomModal'
 
 // Svg components
-import Computer from '../components/spaceship/Computer'
+// import Computer from '../components/spaceship/Computer'
 import Bed from '../components/spaceship/Bed'
 import Desk from '../components/spaceship/Desk'
 
@@ -26,14 +26,16 @@ const ScreenMainUser = () => {
 
           <View style={styles.middleContent}>
             <View style={styles.starWindow}>
-              <Stars/>
+              <Stars />
             </View>
           </View>
+
         </View>
+
         <View style={styles.bottomHalf}>
 
-          <View style={{ flexDirection: 'column', alignItems: 'center' }}>
-              <CustomModal />
+          <View style={{ flexDirection: 'column', alignItems: 'center', bottom: 80 }}>
+            <CustomModal />
 
             <View style={styles.bottomBar}>
               <Bed />
@@ -54,21 +56,21 @@ const styles = StyleSheet.create({
     flex: 1
   },
   topHalf: {
-    flex: 1,
+    flex: 3,
     backgroundColor: 'gray'
   },
   bottomHalf: {
-    flex: 1,
+    flex: 2,
     backgroundColor: 'lightblue'
   },
   middleContent: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center'
   },
   starWindow: {
     width: screenWidth * 0.88,
-    height: screenHeight * 0.39,
+    height: screenHeight * 0.45,
     borderTopLeftRadius: 60,
     borderTopRightRadius: 60,
     borderBottomLeftRadius: 20,
@@ -78,8 +80,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     zIndex: 2,
-    marginTop: -20,
-    backgroundColor: 'black'
+    backgroundColor: '#1a1a1a',
+    bottom: 10
   },
   bottomBar: {
     flexDirection: 'row',

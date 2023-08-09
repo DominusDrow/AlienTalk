@@ -10,9 +10,9 @@ const InitNavigation = (props) => {
   const dispatch = useDispatch()
 
   return (
-        <NavigationContainer>
-            {user === 'guest' ? <StackLogin /> : <StackMain />}
-        </NavigationContainer>
+    <NavigationContainer>
+      {user === 'guest' ? <StackLogin /> : <StackMain />}
+    </NavigationContainer>
   )
 }
 

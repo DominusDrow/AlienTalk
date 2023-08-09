@@ -65,18 +65,18 @@ export const StackNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Store"
+        name='Store'
         component={NoScreenForNow}
         options={{
-          tabBarIcon: ({ focused }) => <Icon name="store" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          tabBarIcon: ({ focused }) => <Icon name='store' color={focused ? '#ffffff' : '#ffffff'} size={25} />,
           headerShown: false
         }}
       />
       <Tab.Screen
-        name="Profile"
+        name='Profile'
         component={NoScreenForNow}
         options={{
-          tabBarIcon: ({ focused }) => <Icon name="person" color={focused ? '#ffffff' : '#ffffff'} size={25} />,
+          tabBarIcon: ({ focused }) => <Icon name='person' color={focused ? '#ffffff' : '#ffffff'} size={25} />,
           headerShown: false
         }}
       />
@@ -100,7 +100,7 @@ export const StackMain = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="StackNavigation"
+        name='StackNavigation'
         component={StackNavigator}
         options={{ headerShown: false }}
       />
