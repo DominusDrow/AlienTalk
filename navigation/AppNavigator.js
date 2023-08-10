@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import ScreenLogin from '../screens/ScreenLogin'
 import ScreenMainUser from '../screens/ScreenMainUser'
+import ScreenStore from '../screens/ScreenStore'
 
 import { Icon } from '@rneui/themed'
 
@@ -66,7 +67,7 @@ export const StackNavigator = () => {
       />
       <Tab.Screen
         name='Store'
-        component={NoScreenForNow}
+        component={ScreenStore}
         options={{
           tabBarIcon: ({ focused }) => <Icon name='store' color={focused ? '#ffffff' : '#ffffff'} size={25} />,
           headerShown: false
