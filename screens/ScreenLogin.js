@@ -2,6 +2,7 @@
 import { View, StyleSheet } from 'react-native'
 import { Button } from '@rneui/themed'
 
+import { Stars } from '../components/background/Starts'
 import { useDispatch } from 'react-redux'
 import { loginSimple } from '../redux/authSlice'
 
@@ -11,6 +12,8 @@ const ScreenLogin = (/* { navigation } */) => {
   // <Image style={styles.img} source={require("../assets/img/hungry.jpg")} />
   return (
     <View style={styles.container}>
+
+      <Stars />
       <Button
         title='LOG IN'
         buttonStyle={{
@@ -38,7 +41,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1a1a1a'
+    backgroundColor: '#1a1a1a',
+    width: '100%',
+    height: '100%'
   },
   img: {
     width: '80%',

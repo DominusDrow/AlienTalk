@@ -26,7 +26,8 @@ const ScreenMainUser = () => {
 
           <View style={styles.middleContent}>
             <View style={styles.starWindow}>
-              <Stars />
+              <Stars x={screenWidth * 0.88} y={screenHeight * 0.45} />
+
             </View>
           </View>
 

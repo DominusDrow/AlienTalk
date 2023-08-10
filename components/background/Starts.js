@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { View, Image, StyleSheet, Animated } from 'react-native'
+import { View, Image, StyleSheet, Animated, Dimensions } from 'react-native'
 import start from '../../assets/background/start.png'
 
-export const Stars = () => {
-  const [stars, setStars] = useState([...Array(40)].map(() => ({ visible: true, x: Math.random() * 400, y: Math.random() * 400 })))
+const { width: screenWidth, height: screenHeight } = Dimensions.get('window')
+
+export const Stars = ({ x = screenWidth, y = screenHeight }) => {
+  const [stars, setStars] = useState([...Array(40)].map(() => ({ visible: true, x: Math.random() * x, y: Math.random() * y })))
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -78,8 +80,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '100%',
-    height: '100%'
+    width: '50%',
+    height: '50%'
   },
   star: {
     position: 'absolute',
