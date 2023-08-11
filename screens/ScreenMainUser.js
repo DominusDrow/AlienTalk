@@ -6,7 +6,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context'
 
 import { Stars } from '../components/background/Starts'
 import TobBar from '../components/TopBar'
-import { CustomModal } from '../components/CustomModal'
+import { ComputerInfo } from '../components/ComputerInfo'
 
 // Svg components
 // import Computer from '../components/spaceship/Computer'
@@ -36,7 +36,7 @@ const ScreenMainUser = () => {
         <View style={styles.bottomHalf}>
 
           <View style={{ flexDirection: 'column', alignItems: 'center', bottom: 80 }}>
-            <CustomModal />
+            <ComputerInfo />
 
             <View style={styles.bottomBar}>
               <Bed />

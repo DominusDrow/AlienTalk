@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import ScreenLogin from '../screens/ScreenLogin'
 import ScreenMainUser from '../screens/ScreenMainUser'
 import ScreenStore from '../screens/ScreenStore'
+import GameComponent from '../screens/GameComponent'
 
 import { Icon } from '@rneui/themed'
 
@@ -103,6 +104,11 @@ export const StackMain = () => {
       <Stack.Screen
         name='StackNavigation'
         component={StackNavigator}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name='GameComponent'
+        component={GameComponent}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>
