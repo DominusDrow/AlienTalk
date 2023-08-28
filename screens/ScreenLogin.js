@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#1a1a1a',
-    width: '100%',
+    width: '50%',
     height: '100%'
   },
   img: {
